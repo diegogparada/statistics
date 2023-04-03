@@ -1,8 +1,4 @@
-about
-usage
-render-book
-preview-book
-url-your-book-url-like-httpsbookdown.orgyihuibookdown
+introduction
 variables
 levels-of-measurement
 analysing-data
@@ -13,8 +9,6 @@ the-median
 the-mean
 the-dispersion-in-a-distribution
 using-a-frequency-distribution-to-go-beyond-the-data
-introduction
 hypothesis
 further-reading
-everything-you-ever-wanted-to-know-about-statistics
 basic-statistical-concepts
