@@ -4,20 +4,20 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Page not found | Statistics with R</title>
-  <meta name="description" content="Page not found | Statistics with R" />
+  <title>Chapter 3 The R environment | Statistics with R</title>
+  <meta name="description" content="Chapter 3 The R environment | Statistics with R" />
   <meta name="generator" content="bookdown 0.33 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Page not found | Statistics with R" />
+  <meta property="og:title" content="Chapter 3 The R environment | Statistics with R" />
   <meta property="og:type" content="book" />
   
-  <meta property="og:description" content="Page not found | Statistics with R" />
+  <meta property="og:description" content="Chapter 3 The R environment | Statistics with R" />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Page not found | Statistics with R" />
+  <meta name="twitter:title" content="Chapter 3 The R environment | Statistics with R" />
   
-  <meta name="twitter:description" content="Page not found | Statistics with R" />
+  <meta name="twitter:description" content="Chapter 3 The R environment | Statistics with R" />
   
 
 <meta name="author" content="Diego Guardia Parada" />
@@ -30,7 +30,7 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
+<link rel="prev" href="basic-statistical-concepts.html"/>
 
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -210,18 +210,73 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="page-not-found" class="section level1">
-<h1>Page not found</h1>
-<p>The page you requested cannot be found (perhaps it was moved or renamed).</p>
-<p>You may want to try searching to find the page's new location, or use
-the table of contents to find the page you are looking for.</p>
+<div id="the-r-environment" class="section level1 hasAnchor" number="3">
+<h1><span class="header-section-number">Chapter 3</span> The R environment<a href="the-r-environment.html#the-r-environment" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="before-you-start" class="section level2 hasAnchor" number="3.1">
+<h2><span class="header-section-number">3.1</span> Before you start<a href="the-r-environment.html#before-you-start" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><strong>R</strong> is a free software environment for statistical computing and graphics. It is what’s known as open source, which means that people who developed R allow everyone to access their code. This open source philosophy allows anyone, anywhere to contribute to the software. Consequently, the capabilities of R dynamically expand as people from all over the world add to it.
+### The R-chitecture
+The beauty of R is that it can be expanded by downloading <strong>packages</strong> that add specific functionality to the program. These packages as well as the software itself, are stored in a central location known as the <strong>CRAN</strong> (Comprehensive R Archive Network)
+. Once a package is stored in the CRAN, anyone with an internet connection can download it from CRAN.
+### Pros and cons of R
+The main advantages of using R are that it is free, and it is a versatile and dynamic environment. In addition, it is a rapidly expanding tool and can respond quickly to new developments in data analysis.</p>
+<p>The downside to R is mainly ease of use. The ethos of R is to work with a command line rather than a graphical user interface (GUI). In layman’s terms this means typing instructions rather than pointing, clicking and draggin things with a mouse.</p>
+</div>
+<div id="using-r" class="section level2 hasAnchor" number="3.2">
+<h2><span class="header-section-number">3.2</span> Using R<a href="the-r-environment.html#using-r" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="commands-objects-and-functions" class="section level3 hasAnchor" number="3.2.1">
+<h3><span class="header-section-number">3.2.1</span> Commands, objects and functions<a href="the-r-environment.html#commands-objects-and-functions" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Commands in R are generally made up of two parts: <strong>objects</strong> and <strong>functions</strong>. These are separated by ‘&lt;-’, which you can think of as meaning ‘is created from’.</p>
+<p>An object is anything created in R. It could be a variable, a collection of variables, a statistical model, etc. Functions are the things that you do in R to create your objects.</p>
+</div>
+<div id="running-multiple-commands-at-once" class="section level3 hasAnchor" number="3.2.2">
+<h3><span class="header-section-number">3.2.2</span> Running multiple commands at once<a href="the-r-environment.html#running-multiple-commands-at-once" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>It can be useful to run several commands in a single line. Separating them with a semicolon does this. For example, the last two commands:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="the-r-environment.html#cb1-1" aria-hidden="true" tabindex="-1"></a>metallica<span class="ot">&lt;-</span><span class="fu">c</span>(<span class="st">&quot;Lars&quot;</span>, <span class="st">&quot;James&quot;</span>, <span class="st">&quot;Jason&quot;</span>, <span class="st">&quot;Kirk&quot;</span>)</span>
+<span id="cb1-2"><a href="the-r-environment.html#cb1-2" aria-hidden="true" tabindex="-1"></a>metallica<span class="ot">&lt;-</span>metallica[metallica <span class="sc">!=</span> <span class="st">&quot;Jason&quot;</span>]</span>
+<span id="cb1-3"><a href="the-r-environment.html#cb1-3" aria-hidden="true" tabindex="-1"></a>metallica<span class="ot">&lt;-</span><span class="fu">c</span>(metallica, <span class="st">&quot;Rob&quot;</span>)</span></code></pre></div>
+<p>can be run in a single line by using a semicolon to separate them:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="the-r-environment.html#cb2-1" aria-hidden="true" tabindex="-1"></a>metallica<span class="ot">&lt;-</span>metallica[metallica <span class="sc">!=</span> <span class="st">&quot;Jason&quot;</span>]; metallica<span class="ot">&lt;-</span><span class="fu">c</span>(metallica, <span class="st">&quot;Rob&quot;</span>)</span></code></pre></div>
+</div>
+<div id="r-is-case-sensitive" class="section level3 hasAnchor" number="3.2.3">
+<h3><span class="header-section-number">3.2.3</span> R is case sensitive<a href="the-r-environment.html#r-is-case-sensitive" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>R is case sensitive, which means that if the same things are written in upper or lower case, R thinks that they are completely different things. For example, we created a variable called <strong>metalica</strong>; if we asked to see the contents of <strong>Metallica</strong> (note the capital M), R would tell us that this object didn’t exist.</p>
+</div>
+<div id="setting-a-working-directory" class="section level3 hasAnchor" number="3.2.4">
+<h3><span class="header-section-number">3.2.4</span> Setting a working directory<a href="the-r-environment.html#setting-a-working-directory" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>To set a working directory, we use <strong>setwd()</strong> command to specify a newly created folder as the working directory, then we see the new working directory by typing <strong>getwd()</strong>:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="the-r-environment.html#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">&quot;C:/Users/dguar/Desktop/statistics&quot;</span>)</span>
+<span id="cb3-2"><a href="the-r-environment.html#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">getwd</span>()</span></code></pre></div>
+<pre><code>## [1] &quot;C:/Users/dguar/Desktop/statistics&quot;</code></pre>
+<p>By executing this command, we can now access files in that folder directly without having to reference the full file path. For example, if we wanted to load our <strong>data.dat</strong> file again, we can now execute this command:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="the-r-environment.html#cb5-1" aria-hidden="true" tabindex="-1"></a>myData<span class="ot">=</span><span class="fu">read.delim</span>(<span class="st">&quot;data.dat&quot;</span>)</span></code></pre></div>
+</div>
+<div id="installing-packages" class="section level3 hasAnchor" number="3.2.5">
+<h3><span class="header-section-number">3.2.5</span> Installing packages<a href="the-r-environment.html#installing-packages" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>R comes with some base functions ready for you to use. However, to get the most out of it, we need to install packages that enable us to do particular things.</p>
+<p>You can install packages in two ways: through the menus or using a command. If you know the package that you want to install then the simplest way is to execute this command: <strong>install.packages(“package.name”)</strong></p>
+<p>You need to install the package only once but you need to reference it each time you star a new session of R. To reference a package, we simply execute this general command: <strong>library(“package.name”)</strong></p>
+</div>
+<div id="disambiguating-functions" class="section level3 hasAnchor" number="3.2.6">
+<h3><span class="header-section-number">3.2.6</span> Disambiguating functions<a href="the-r-environment.html#disambiguating-functions" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Ocassionally you might stumble across two functions in two different packages that have the same name. For example, there is a <strong>recode()</strong> function in both the <strong>Hmisc</strong> and<strong>car</strong> packages. If you hae both packages loaded and you try to use recode(), R won’t know which one to use or will have a guess. This istuation is easiy to recitfy: you can specify the package when you use the function as follows: <strong>package::function()</strong></p>
+</div>
+<div id="getting-help" class="section level3 hasAnchor" number="3.2.7">
+<h3><span class="header-section-number">3.2.7</span> Getting help<a href="the-r-environment.html#getting-help" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>If you are using a particular function and you want to know more about it then you can get help by executing the <strong>help()</strong> command like this: <strong>help(function)</strong> or by executing <strong>?function</strong>. If you try to use help but the help files are not found, check that you have loaded the relevant package with the library() command.</p>
+</div>
+</div>
+<div id="getting-data-into-r" class="section level2 hasAnchor" number="3.3">
+<h2><span class="header-section-number">3.3</span> Getting data into R<a href="the-r-environment.html#getting-data-into-r" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-
+<a href="basic-statistical-concepts.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 
     </div>
   </div>
@@ -253,7 +308,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/USERNAME/REPO/edit/BRANCH/%s",
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/index.Rmd",
 "text": "Edit"
 },
 "history": {
